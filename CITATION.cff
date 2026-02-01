@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this micro research note template, please cite it as below."
+authors:
+  - family-names: Saxena
+    given-names: Ajay
+    orcid: "https://orcid.org/0009-0002-2479-2658"
+title: "Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note Template)"
+version: "1.0.0"
+date-released: 2026-02-01
+license: MIT

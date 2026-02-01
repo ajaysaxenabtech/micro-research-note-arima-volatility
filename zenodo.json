@@ -1,0 +1,20 @@
+{
+  "title": "Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note)",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "creators": [
+    {
+      "name": "Saxena, Ajay",
+      "orcid": "0009-0002-2479-2658"
+    }
+  ],
+  "description": "A minimal, reproducible comparison of ARIMA forecast accuracy across normal vs high-volatility windows in a pension NAV time series.",
+  "keywords": [
+    "pension NAV",
+    "ARIMA",
+    "volatility",
+    "forecast error",
+    "time series"
+  ],
+  "license": "MIT"
+}
