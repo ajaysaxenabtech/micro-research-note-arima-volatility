@@ -1,3 +1,17 @@
+# Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note v1.2)
+DOI (v1.2): 10.5281/zenodo.18449920
+DOI (all versions): 10.5281/zenodo.18449919
+
+How to cite:
+Saxena, A. (2026). Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note v1.2). Zenodo. 10.5281/zenodo.18449920
+
+“Reproducibility” note:
+
+data source is Axis Pension Fund website (do not redistribute raw data if terms restrict)
+
+instructions to re-download the dataset
+
+
 # Micro Research Note — ARIMA vs Volatility Regime (Pension NAV)
 
 This repository is a **mini-template** for a 2–3 page micro research note:
