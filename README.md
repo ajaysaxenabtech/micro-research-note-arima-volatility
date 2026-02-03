@@ -1,64 +1,42 @@
 # Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note v1.2)
-DOI (v1.2): 10.5281/zenodo.18449920
-DOI (all versions): 10.5281/zenodo.18449919
 
-How to cite:
-Saxena, A. (2026). Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series (Micro Research Note v1.2). Zenodo. 10.5281/zenodo.18449920
+**Zenodo DOI (v1.2):** https://doi.org/10.5281/zenodo.18449920  
+**Zenodo DOI (all versions):** https://doi.org/10.5281/zenodo.18449919  
 
-“Reproducibility” note:
+## How to cite
+Saxena, A. (2026). *Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series* (Micro Research Note v1.2). Zenodo. https://doi.org/10.5281/zenodo.18449920
 
-data source is Axis Pension Fund website (do not redistribute raw data if terms restrict)
+## What this repository contains
+This repo reproduces the experiment behind the micro research note:
+- Volatility proxy: rolling std. dev. of returns (**VOL_WINDOW=20**)
+- Forecast horizon: **HORIZON=12**
+- Regimes (N=60 each):
+  - Normal: 2023-04-26 to 2023-07-21
+  - Volatile: 2024-04-02 to 2024-07-03
+- Model: ARIMA(p,d,q), order selected by AIC within each regime
 
-instructions to re-download the dataset
+## Reproducibility and data note
+- **Data source:** Axis Pension Fund website (daily NAV)  
+- **Important:** Do not redistribute raw NAV data if the website terms restrict redistribution.
 
-
-# Micro Research Note — ARIMA vs Volatility Regime (Pension NAV)
-
-This repository is a **mini-template** for a 2–3 page micro research note:
-
-**Title:** Effect of Market Volatility on ARIMA Forecasting Accuracy for Pension NAV Time Series  
-**Author:** Ajay Saxena (ORCID: 0009-0002-2479-2658)
-
-## What you will produce (end-to-end)
-1. A small, reproducible ARIMA experiment comparing two regimes (**Normal vs Volatile**)  
-2. One results table (MAE/RMSE/MAPE) + one figure (Actual vs Forecast)  
-3. A 3-page research note in `paper/` (DOCX; convert to PDF when ready)  
-
-## Quick start (VS Code + Jupyter)
-### 1) Put your data
-Save a CSV to `data/nav.csv` with columns:
+### Data format expected
+Create: `data/nav.csv` with columns:
 - `date` (YYYY-MM-DD)
-- `nav` (numeric NAV)
+- `NAV` (numeric)
 
-See `data/README.md` for details.
+Example:
+```csv
+date,NAV
+2022-10-25,9.8234
+2022-10-26,9.8450
 
-### 2) Create environment
-```bash
+
 python -m venv .venv
-# Windows: .venv\Scripts\activate
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
 source .venv/bin/activate
+
 pip install -r requirements.txt
-```
 
-### 3) Run the notebook
-Open:
-- `notebooks/01_arima_volatility_micro_note.ipynb`
 
-Run cells top-to-bottom. Outputs:
-- `output/metrics_table.csv`
-- `figures/figure1_actual_vs_forecast.png`
-
-### 4) Fill the micro note
-Open:
-- `paper/micro_research_note_template_ajay_saxena.docx`
-
-Copy:
-- numbers from `output/metrics_table.csv` into **Table 1**
-- the figure from `figures/` into **Figure 1**
-
-## Suggested “publish” route (simple)
-- Push this repo to GitHub
-- Upload the final PDF to Zenodo and link the GitHub repo
-
-## License
-MIT (see `LICENSE`).
